@@ -2,17 +2,16 @@
 
 ## The easiest way to build Machine Learning APIs  [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=BentoML:%20The%20easiest%20way%20to%20build%20Machine%20Learning%20APIs&url=https://github.com/bentoml/BentoML&via=bentomlai&hashtags=mlops,modelserving,ML,AI,machinelearning,bentoml)
 
-BentoML makes moving trained ML models to production easy:
+BentoML makes is easy to move trained ML models to production. You can:
 
 * Package models trained with __any ML framework__ and reproduce them for model serving
     in production
 * __Deploy anywhere__ for online API serving or offline batch serving
-* High-Performance API model server with _adaptive micro-batching_ support
-* Central hub for managing models and deployment process via Web UI and APIs
-* Modular and flexible design making it _adaptable to your infrastrcuture_
+* Use our high-performance API model server with _adaptive micro-batching_ support
+* Access a central hub for managing models and deployment process via Web UI and APIs
+* Enjoy our modular and flexible design which is _adaptable to your infrastrcuture_
                                                            
-BentoML is a framework for serving, managing, and deploying machine learning models. It 
-is aiming to bridge the gap between Data Science and DevOps, and enable teams to deliver
+BentoML is a framework for serving, managing, and deploying machine learning models. It aims to bridge the gap between data science and DevOps, and enable teams to deliver
 prediction services in a fast, repeatable, and scalable way.
 
 👉 Join the community:
@@ -121,7 +120,7 @@ to understand which deployment option is best suited for your use case.
 ## Introduction
 
 BentoML provides abstractions for creating a prediction service that's bundled with 
-trained models. User can define inference APIs with serving logic with Python code and 
+trained models. Users can define inference APIs with serving logic with Python code and 
 specify the expected input/output data type:
 
 ```python
@@ -152,7 +151,7 @@ class MyPredictionService(BentoService):
 ```
 
 At the end of your model training pipeline, import your BentoML prediction service
-class, pack it with your trained model, and persist the entire prediction service with
+class, pack it with your trained model, and persist the entire prediction service with a
 `save` call at the end:
 
 ```python
@@ -164,15 +163,15 @@ svc.save()  # default saves to ~/bentoml/repository/MyPredictionService/{version
 
 This will save all the code files, serialized models, and configs required for 
 reproducing this prediction service for inference. BentoML automatically captures all
-the pip package dependencies and local python code dependencies, and versioned together
+the pip package dependencies and local python code dependencies, and versions them together
 with other code and model files in one place.
 
-With the saved prediction service, user can start a local API server hosting it:
+With the saved prediction service, users can start a local API server hosting it:
 ```bash
 bentoml serve MyPredictionService:latest
 ```
 
-And create a docker container image for this API model server with one command:
+And create a Docker container image for this API model server with one command:
 ```bash
 bentoml containerize MyPredictionService:latest -t my_prediction_service:latest
 
@@ -181,10 +180,10 @@ docker run -p 5000:5000 my_prediction_service:latest
 
 The container image produced will have all the required dependencies installed. Besides
 the model inference API, the containerized BentoML model server also comes with
-instrumentations, metrics, health check endpoint, prediction logging, tracing, which
-makes it easy for your DevOps team to integrate with and deploy in production.
+instrumentations, metrics, health check endpoint, prediction logging, and tracing. This
+makes it easy for your DevOps team to integrate with the server and deploy in production.
 
-If you are at a small team without DevOps support, BentoML also provides an [one-click
+If you are at a small team without DevOps support, BentoML also provides a [one-click
 deployment option](https://github.com/bentoml/BentoML#deployment-options), which deploys
 the model server API to cloud platforms with minimum setup.
 
@@ -198,21 +197,21 @@ to learn more about the basic functionalities of BentoML. You can also try it ou
 Moving trained Machine Learning models to serving applications in production is hard. It
 is a sequential process across data science, engineering and DevOps teams: after a
 model is trained by the data science team, they hand it over to the engineering team to
-refine and optimize code and creates an API, before DevOps can deploy.
+refine and optimize code and create an API, before DevOps can deploy.
 
-And most importantly, Data Science teams want to continuously repeat this process,
-monitor the models deployed in production and ship new models quickly. It often takes
+Most importantly, data science teams want to continuously repeat this process,
+monitor the models deployed in production, and ship new models quickly. It often takes
 months for an engineering team to build a model serving & deployment solution that allow
 data science teams to ship new models in a repeatable and reliable way.
 
 BentoML is a framework designed to solve this problem. It provides high-level APIs for
-Data Science team to create prediction services, abstract away DevOps'
-infrastructure needs and performance optimizations in the process. This allows DevOps
-team to seamlessly work with data science side-by-side, deploy and operate their models
+data science teams to create prediction services, abstract away DevOps'
+infrastructure needs, and allow performance optimizations in the process. This equips DevOps
+teams to seamlessly work with data science side-by-side, and deploy and operate their models
 packaged in BentoML format in production.
 
-Check out [Frequently Asked Questions](https://docs.bentoml.org/en/latest/faq.html) page
-on how does BentoML compares to Tensorflow-serving, Clipper, AWS SageMaker, MLFlow, etc.
+Check out our [Frequently Asked Questions](https://docs.bentoml.org/en/latest/faq.html) page
+to learn how BentoML compares to Tensorflow-serving, Clipper, AWS SageMaker, MLFlow, etc.
 
 <img src="https://raw.githubusercontent.com/bentoml/BentoML/master/docs/source/_static/img/bentoml-overview.png" width="600">
 
@@ -234,7 +233,7 @@ Want to help build BentoML? Check out our
 ## Releases
 
 BentoML is under active development and is evolving rapidly.
-It is currently a Beta release, __we may change APIs in future releases__ and there
+It is currently a Beta release. __We may change APIs in future releases__ and there
 are still major features being worked on.
 
 Read more about the latest updates from the [releases page](https://github.com/bentoml/BentoML/releases).
@@ -243,11 +242,11 @@ Read more about the latest updates from the [releases page](https://github.com/b
 ## Usage Tracking
 
 BentoML by default collects anonymous usage data using [Amplitude](https://amplitude.com).
-It only collects BentoML library's own actions and parameters, no user or model data will be collected.
+It only collects BentoML library's own actions and parameters. No user or model data will be collected.
 [Here is the code that does it](https://github.com/bentoml/BentoML/blob/master/bentoml/utils/usage_stats.py).
 
-This helps BentoML team to understand how the community is using this tool and
-what to build next. You can easily opt-out of usage tracking by running the following
+This helps the BentoML team to understand how the community is using this tool and
+what to build next. You are free to opt-out of usage tracking by running the following
 command:
 
 ```bash
