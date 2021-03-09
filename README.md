@@ -2,7 +2,7 @@
 
 ## The easiest way to build Machine Learning APIs  [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=BentoML:%20The%20easiest%20way%20to%20build%20Machine%20Learning%20APIs&url=https://github.com/bentoml/BentoML&via=bentomlai&hashtags=mlops,modelserving,ML,AI,machinelearning,bentoml)
 
-BentoML makes is easy to move trained ML models to production. You can:
+BentoML makes it easy to move trained ML models to production. You can:
 
 * Package models trained with __any ML framework__ and reproduce them for model serving
     in production
