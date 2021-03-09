@@ -9,7 +9,7 @@ BentoML makes it easy to move trained ML models to production. You can:
 * __Deploy anywhere__ for online API serving or offline batch serving
 * Use our high-performance API model server with _adaptive micro-batching_ support
 * Access a central hub for managing models and deployment process via Web UI and APIs
-* Enjoy our modular and flexible design which is _adaptable to your infrastrcuture_
+* Enjoy our modular and flexible design which is _adaptable to your infrastructure_
                                                            
 BentoML is a framework for serving, managing, and deploying machine learning models. It aims to bridge the gap between data science and DevOps, and enable teams to deliver
 prediction services in a fast, repeatable, and scalable way.
